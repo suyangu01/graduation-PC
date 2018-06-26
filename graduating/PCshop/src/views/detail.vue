@@ -26,7 +26,7 @@
                             发布时间：{{data.publishTime}}
                         </div>
                         <div style="font-size: 16px">
-                            交易方式：微信or支付宝or面议
+                            交易方式：微信/支付宝/面议
                         </div>
                         <el-button  @click="maijia"
                                 style="color:black;margin-top:20px;background:mediumspringgreen;font-size:18px;font-weight:600;">
