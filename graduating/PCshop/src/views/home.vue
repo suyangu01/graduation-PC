@@ -13,8 +13,9 @@
                             </el-menu-item>
                         </el-menu>
                     </el-aside>
+					
                     <el-main style="margin: 0 5px 0;">
-                        <!--轮播图-->
+                        <!--使用南宁学院校园一角实现的轮播图-->
                         <el-carousel height="200px" style="margin-bottom: 10px;">
                             <el-carousel-item v-for="item in carouselItem">
                                 <img :src="item" :alt="item" style="width: inherit;height: inherit;">
