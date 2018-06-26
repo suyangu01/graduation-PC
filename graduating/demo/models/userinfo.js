@@ -1,0 +1,19 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+module.exports = mongoose.model('Userinfo', new Schema({
+    name: String,
+    sex: String,
+    age: Number,
+    address:String,
+    rank: Number,
+    ticket: String
+    // comment:[{body:String,date:Date}],
+    // tags:[{title:String}],
+    // date:{type:Date,default:Date.now},
+    // hidden: Boolean,
+    // mete:{
+    //     vores:Number,
+    //     favs: Number
+    // }
+}))

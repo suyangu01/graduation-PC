@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<%- include header %>
+<h1><%= user.name %></h1>
+
+<form action="/user/photo" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <input type="file" name="photo" required accept=".jpg,.png"/>
+  </div>
+  <input type="submit" class="btn btn-success form-control" value="上传"/>
+</form>
+
+<%- include footer %>
+
+<div id="ShowDataArea">
+  <h4>此处展示 录入的数据 （用Ejs模板方式）</h4>
+  <span>多条数据采用forEach处理</span>
+    <% testData.forEach(function(testModel){ %>
+  <ul>
+    <li><span>编号</span><span><%= testModel.SortID %></span></li>
+    <li><span>姓名</span><span><%= testModel.Name %></span></li>
+    <li><span>性别</span><span><%= testModel.Sex %></span></li>
+    <li><span>地址</span><span><%= testModel.Address %></span></li>
+  </ul>
+    <% }) %>
+
+</div>
+<div id="ShowArea">
+  <h4>采用 <%= title %> 测试Node - MongoDB 数据 写入/修改/删除/回显等</h4>
+  <hr>
+  <div id="SortID"><span>编号</span><input type="text" placeholder="编号"/></div>
+  <div id="Name"><span>姓名</span><input type="text" placeholder="姓名"/></div>
+  <div id="Sex"><span>性别</span><input type="text" placeholder="性别"/></div>
+  <div id="Address"><span>地址</span><input type="text" placeholder="地址"/></div>
+  <button id="uploadData">OK</button>
+</div>
+
+</body>
+<script type="text/javascript" src="/javascripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/javascripts/testPage.js"></script>
+<!--页面JS如下-->
+</html>
